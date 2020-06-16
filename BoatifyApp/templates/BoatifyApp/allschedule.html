@@ -86,9 +86,8 @@ tbody {
 <a class="navbar-brand" href="{% url 'homepage' %}" style="text-decoration:none"><h3>&nbsp;&nbsp;&nbsp;B O A T I F Y
 </h3></a>
 
-
-{% if Schedules %}
 <h1 align="center" style="color:white">SCHEDULES</h1>
+{% if Schedules %}
 
 
 <div class="container">
@@ -101,7 +100,6 @@ tbody {
             <th>To</th>
             <th>Time</th>
             <th>Fare</th>
-            <th><div align="center"><i class="fas fa-hand-point-right"></i></div></th>
         </tr>
         </thead>
         <tbody id="table-body">
@@ -120,11 +118,6 @@ tbody {
                 <input type="hidden" name="ftime" value={{time}}>
                 <input type="hidden" name="fdate" value={{date}}>
                 <input type="hidden" name="ffare" value={{d.fare}}>
-                {% if user.is_authenticated %}
-                <td><input type="submit" name="booknow" value="Book Now"></td>
-                {% else %}
-                <td><a href="{% url 'login' %}">Login to Book </a></td>
-                {% endif %}
             </form>
 
         </tr>
@@ -133,11 +126,9 @@ tbody {
     </table>
 </div>
 {% else %}
-<script>
-window.location.href='http://127.0.0.1:8000/homepage';
-window.alert('NO SERVICE AT THIS TIME');
-</script>
-
+<h2 align="center" style="color:red">No services at this time !!!</h2>
+<a align="center" href="{% url 'homepage' %}"><h3>Back to Home
+</h3></a>
 {% endif %}
 <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </body>

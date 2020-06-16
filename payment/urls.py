@@ -9,4 +9,6 @@ urlpatterns = [
     path('charge', views.charge, name='charge'),
     path('chargepaypal', views.chargepaypal, name="chargepaypal"),
     path('paymentstatus', views.paymentstatus, name="paymentstatus"),
+    path('upload', views.upload, name= 'upload'),
+    path('display_ticket', views.display_ticket, name = 'display_ticket'),
     ]

@@ -28,5 +28,15 @@ class booking(models.Model):
         name = self.name + ' ' + str(self.date)
         return name
 
+class Ticket(models.Model):
+    ticket_img = models.ImageField(upload_to='images/')
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.ticket_img.url
+        except:
+            url = ''
+        return url
 
 

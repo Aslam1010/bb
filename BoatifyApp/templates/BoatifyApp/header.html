@@ -33,7 +33,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
+
                 <!--''pythoncodabov<li class="nav-item">
                     <a class="nav-link" href="{% url 'payment' %}">Pay<span class="sr-only">(current)</span></a>
                 </li>
@@ -51,7 +51,7 @@
 
                 </li>''''pythoncodblow-->
 
-
+                <ul class="navbar-nav mx-auto">
                 {% if user.is_authenticated %}
                 <li style="color:#32be8f"> &nbsp;&nbsp;&nbsp; Hello, {{user.first_name}} &nbsp;&nbsp;&nbsp;</li>
                 <li class="nav-item">
@@ -68,8 +68,13 @@
             </ul>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'tracking' %}">Track The Boat</a>
+                    <a class="nav-link" href="{% url 'tracking' %}">Track the Boat</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'fullscheduleview' %}">View Schedules</a>
+                </li>
+            </ul>
+                <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </li>

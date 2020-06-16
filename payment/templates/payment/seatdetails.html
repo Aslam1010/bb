@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Seat Details</title>
 </head>
-<body>
-<div align="center">
+<body style="background: linear-gradient(to right, #34e89e, #0f3443);">
+<div align="center" style="padding:100px">
 
-    <h1 style="color:red">Reserved Seats</h1>
+    <h1 style="color:white">Reserved Seats</h1>
 
-    {{print.Seats}}
+    <h1>{{print.Seats}}</h1>
 
     <form method="post" action="{% url 'payment' %}">
         {% csrf_token %}

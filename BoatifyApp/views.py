@@ -28,7 +28,11 @@ def schedulelist(request):
 
         d = Schedule.objects.filter(time=time, fr=fromm, to=to)
         return render(request, 'BoatifyApp/schedulelist.html', {'Schedules': d, 'date':date, 'time': time})
-    #return render(request, 'BoatifyApp/schedulelist.html')
+
+
+def fullscheduleview(request):
+    s = Schedule.objects.all().order_by('fr','time')
+    return render(request, 'BoatifyApp/allschedule.html', {'Schedules': s})
 
 
 def contact(request):

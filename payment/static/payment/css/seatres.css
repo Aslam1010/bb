@@ -7,12 +7,13 @@ html {
 }
 
 .plane {
+    height: 100px;
   margin: 20px auto;
   max-width: 300px;
 }
 
 .cockpit {
-  height: 250px;
+  height: 230px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -32,7 +33,7 @@ html {
 }
 .cockpit h1 {
   width: 60%;
-  margin: 100px auto 35px auto;
+  margin: 100px auto 30px auto;
   color : #FFFFFF
 }
 

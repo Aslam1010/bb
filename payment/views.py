@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, HttpResponse
 from django.urls import reverse
 import pyqrcode
-from .models import Seatres, booking
+from .models import Seatres, booking, Ticket
 from pyqrcode import QRCode
+
 
 import stripe
 stripe.api_key = "sk_test_g16mqCpueK42qQBfKCkus9UW00JIRkOIIt"
@@ -182,4 +183,20 @@ def qrcode(request):
 
         return render(request, 'payment/qrcode.html', {'b': Dict})
 
+
+def upload(request):
+    if request.method == 'POST':
+        file = request.POST.get('ticket_img')
+        s = Ticket(ticket_img = file)
+        s.save()
+        return render(request, 'payment/upload.html')
+    else:
+        return render(request, 'payment/upload.html')
+
+
+def display_ticket(request):
+    if request.method == 'GET':
+        # getting all the objects of hotel.
+        Tickets = Ticket.objects.all()
+        return render(request, 'payment/displaytickets.html', {'ticket_images': Tickets})
 

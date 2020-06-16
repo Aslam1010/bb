@@ -27,7 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
 </head>
-<body background="{% static 'payment/images/wave.png'%}">
+<body style="background: linear-gradient(to right, black, #0f3443);">
 <a style="text-decoration: none" class="navbar-brand" href="{% url 'homepage' %}">
     <h3>
         <h3 style="font-family: Helvetica">&nbsp;&nbsp;<span style="font-size:20px">Back to</span> BOATIFY</h3>
@@ -35,7 +35,7 @@
 </a>
 
 <div align="center">
-    <div id="html-content-holder" class="card card-5">
+    <div id="html-content-holder" class="card card-5" style="background: linear-gradient(to right, #1cd8d2, #93edc7);">
 
 
         <h1>BOATIFY</h1>
@@ -66,9 +66,9 @@
 
 
 <div align="center">
-    <input id="btn-Preview-Image" type="checkbox" value="Download"/>&nbsp;&nbsp;I`m not a Robot
+    <input id="btn-Preview-Image" type="checkbox" value="Download"/>&nbsp;&nbsp;<span style="color:white"> I`m not a Robot</span>
     <a href="#" id="btn-Convert-Html2Image"><h2>Download Ticket</h2></a>
-
+   <!-- <a href="{% url 'upload' %}">Upload</a>-->
 </div>
 
 <!--<h3>Preview :</h3>
